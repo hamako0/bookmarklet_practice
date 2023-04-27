@@ -45,7 +45,7 @@ try{(function(){(async $=>{
       <li><button >hoge</button></li>
       <li><button>hoge</button></li>
     </ul>
-    `+style+`
+    ${style}
   `);
 
   $(document).delegate('#script_list button', 'click', (e)=>{
