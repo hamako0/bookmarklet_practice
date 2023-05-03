@@ -48,11 +48,12 @@ try{(function(){(async $=>{
     </ul>
     ${style}
   `);
+
   $(document).delegate('#script_list button', 'click', (e)=>{
     let id = e.target.id;
     $('#modal_wrap').fadeOut(function(){ $(this).remove() });
     if(id === 'bookmarklet_hello') {
-      return alert('hello');
+      alert('hello');
     }
     (function(){
       var o = {script: id};
