@@ -37,7 +37,7 @@ try{(function(){(async $=>{
     <p style="font-size: 30px;">practice</p>
     <ul id="script_list">
       <li><button id="bookmarklet_hello">hello</button></li>
-      <li><button id="bookmarklet_bs>BS</button></li>
+      <li><button id="bookmarklet_bs">BS</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
