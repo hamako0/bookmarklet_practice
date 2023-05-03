@@ -34,6 +34,7 @@ try{(function(){(async $=>{
     }
   </style>`;
   let bookmarklet = $(`
+  ${style}
     <p style="font-size: 30px;">practice</p>
     <ul id="script_list">
       <li><button id="bookmarklet_hello">hello</button></li>
@@ -46,7 +47,6 @@ try{(function(){(async $=>{
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
     </ul>
-    ${style}
   `);
 
   $(document).delegate('#script_list button', 'click', (e)=>{
@@ -55,14 +55,14 @@ try{(function(){(async $=>{
     if(id === 'bookmarklet_hello') {
       return alert('hello');
     }
-    // (function(){
-    //   var o = {script: id};
-    //   var d = document;
-    //   var s = d.createElement('script');
-    //   s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/${o.script}.js`;
-    //   d.body.appendChild(s);
-    //   d.body.removeChild(s);
-    // })();
+    (function(){
+      var o = {script: id};
+      var d = document;
+      var s = d.createElement('script');
+      s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/${o.script}.js`;
+      d.body.appendChild(s);
+      d.body.removeChild(s);
+    })();
   });
 
   modal( bookmarklet, width);
