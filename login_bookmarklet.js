@@ -53,16 +53,16 @@ try{(function(){(async $=>{
     let id = e.target.id;
     $('#modal_wrap').fadeOut(function(){ $(this).remove() });
     if(id === 'bookmarklet_hello') {
-      alert('hello');
+      return alert('hello');
     }
-    (function(){
-      var o = {script: id};
-      var d = document;
-      var s = d.createElement('script');
-      s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/${o.script}.js`;
-      d.body.appendChild(s);
-      d.body.removeChild(s);
-    })();
+    // (function(){
+    //   var o = {script: id};
+    //   var d = document;
+    //   var s = d.createElement('script');
+    //   s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/${o.script}.js`;
+    //   d.body.appendChild(s);
+    //   d.body.removeChild(s);
+    // })();
   });
 
   modal( bookmarklet, width);
