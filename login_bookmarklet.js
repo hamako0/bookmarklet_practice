@@ -1,4 +1,3 @@
-
 try{(function(){(async $=>{
   let width = 800;
   let style = `<style>
@@ -34,16 +33,16 @@ try{(function(){(async $=>{
     }
   </style>`;
   let bookmarklet = $(`
-    <p style="font-size: 30px;">practice2</p>
+    <p style="font-size: 30px;">practice</p>
     <ul id="script_list">
       <li><button id="bookmarklet_hello">hello</button></li>
-      <li><button id="bookmarklet_bs">BS</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
+      <li><button >hoge</button></li>
       <li><button>hoge</button></li>
     </ul>
     ${style}
@@ -51,18 +50,9 @@ try{(function(){(async $=>{
 
   $(document).delegate('#script_list button', 'click', (e)=>{
     let id = e.target.id;
-    $('#modal_wrap').fadeOut(function(){ $(this).remove() });
     if(id === 'bookmarklet_hello') {
-      return alert('hello');
+      alert('hello');
     }
-    (function(){
-      var o = {script: id};
-      var d = document;
-      var s = d.createElement('script');
-      s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/${o.script}.js`;
-      d.body.appendChild(s);
-      d.body.removeChild(s);
-    })();
   });
 
   modal( bookmarklet, width);
