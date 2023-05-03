@@ -34,7 +34,7 @@ try{(function(){(async $=>{
     }
   </style>`;
   let bookmarklet = $(`
-    <p style="font-size: 30px;">practice</p>
+    <p style="font-size: 30px;">practice2</p>
     <ul id="script_list">
       <li><button id="bookmarklet_hello">hello</button></li>
       <li><button id="bookmarklet_bs">BS</button></li>
@@ -46,7 +46,7 @@ try{(function(){(async $=>{
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
     </ul>
-    `+style+`
+    ${style}
   `);
 
   $(document).delegate('#script_list button', 'click', (e)=>{
