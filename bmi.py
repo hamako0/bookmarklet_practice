@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 from browser import document
-from browser import alert
 
 
 def calc_bmi(e):
@@ -14,6 +13,4 @@ def calc_bmi(e):
     rslt.text = bmi
 
 execute_btn = document["execute"]
-# execute_btn.bind("click", calc_bmi)
-execute_btn.bind("click", alert("Hello World!")
-)
+execute_btn.bind("click", calc_bmi)
