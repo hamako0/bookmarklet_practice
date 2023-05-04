@@ -73,12 +73,12 @@ try{(function(){(async $=>{
     let elem = $('<div>', {id:'bs_winscp_modal_wrap'}).css({
       'z-index': '100', 'position': 'fixed', 'top': '0px', 'left': '0px', 'width': '100%', 'height': '100%', 'background-color': 'hsla(0, 0%, 60%, 0.7)'
     }).append(
-      $('<div>', {id:'modal_outer'}).css({
+      $('<div>', {id:'bs_winscp_modal_outer'}).css({
         'box-sizing': 'border-box', 'padding': '20px', 'margin': 'auto', 'background': '#ffffff', 'position': 'absolute', 'top': '0', 'bottom': '0', 'left': '0', 'right': '0', 'height': '80%'
       }).append(
-        $('<div>', {id:'modal_inner'}).append(
-          $('<p>', {id:'modal_headline'}),
-          $('<div>', {id:'modal_body'}) ).css({
+        $('<div>', {id:'bs_winscp_modal_inner'}).append(
+          $('<p>', {id:'bs_winscp_modal_headline'}),
+          $('<div>', {id:'bs_winscp_modal_body'}) ).css({
             'text-align': 'center', 'height': '700px', 'overflow-y': 'scroll', 'overflow-x': 'hidden'
           })
         )
@@ -87,13 +87,13 @@ try{(function(){(async $=>{
       elem.click(function(e){
         if( e.target.id === 'bs_winscp_modal_wrap' ){
           $('#bs_winscp_modal_wrap').fadeOut('fast');
-          $('#modal_body').empty();
+          $('#bs_winscp_modal_body').empty();
         }
       })
     );
-    $('#modal_body').append( elements );
+    $('#bs_winscp_modal_body').append( elements );
     $('#bs_winscp_modal_wrap').fadeIn('fast');
-    $('#modal_outer').width( width + 57 );
+    $('#bs_winscp_modal_outer').width( width + 57 );
   };
 
 })(jQuery);})();}catch(e){alert('ブックマークレット・エラー\n' + e);}
