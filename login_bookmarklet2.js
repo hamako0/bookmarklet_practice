@@ -95,4 +95,17 @@ try{(function(){(async $=>{
     $('#modal_outer').width( width + 57 );
   };
 
+  var d = document;
+  var s2 = d.createElement('script');
+  s2.src = "https://jade-puffpuff-5ce090.netlify.app/brython/brython.js";
+  d.head.appendChild(s2);
+  var s3 = d.createElement('script');
+  s3.src = "https://jade-puffpuff-5ce090.netlify.app/brython/brython_stdlib.js";
+  d.head.appendChild(s3);
+
+  var s4 = d.createElement('script');
+  s4.src = "https://jade-puffpuff-5ce090.netlify.app/bmi.py";
+  s4.type = "text/python";
+  d.head.appendChild(s4);
+
 })(jQuery);})();}catch(e){alert('ブックマークレット・エラー\n' + e);}
