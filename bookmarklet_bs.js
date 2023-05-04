@@ -34,9 +34,7 @@ try{(function(){(async $=>{
     }
   </style>`;
   let bs_winscp_bookmarklet = $(`
-  <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js"></script>
-  <script type="text/python" src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython_test/bmi.py"></script>
+
 
     <p style="font-size: 30px;">bs_winscp</p>
     <form onload="brython()">
@@ -62,7 +60,7 @@ try{(function(){(async $=>{
       var o = {script: id};
       var d = document;
       var s = d.createElement('script');
-      s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/${o.script}.js`;
+      s.src = `https://jade-puffpuff-5ce090.netlify.app/${o.script}.js`;
       d.body.appendChild(s);
       d.body.removeChild(s);
     })();
