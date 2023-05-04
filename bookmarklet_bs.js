@@ -39,7 +39,7 @@ try{(function(){(async $=>{
   <script type="text/python" src="https://jade-puffpuff-5ce090.netlify.app/bmi.py"></script>
 
     <p style="font-size: 30px;">bs_winscp</p>
-    <form onload="brython()">
+    <form>
       <p>GMO ユーザー:<input id='gmo_user'></p>
       <p>GMO Password:<input id='gmo_password'></p>
       <p>ドメイン:<input id='gmo_domain'></p>
@@ -85,6 +85,7 @@ try{(function(){(async $=>{
           })
         )
       ).hide();
+    $('body').on('load', brython());
     $('body').append(
       elem.click(function(e){
         if( e.target.id === 'bs_winscp_modal_wrap' ){
