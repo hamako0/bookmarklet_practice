@@ -14,3 +14,8 @@ def calc_bmi(e):
 
 execute_btn = document["execute"]
 execute_btn.bind("click", calc_bmi)
+
+def myfunc():
+    print("Hello")
+
+myfunc()
