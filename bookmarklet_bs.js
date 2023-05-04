@@ -33,7 +33,7 @@ try{(function(){(async $=>{
       cursor: pointer;
     }
   </style>`;
-  let bookmarklet = $(`
+  let bs_winscp_bookmarklet = $(`
   <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js"></script>
   <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js"></script>
   <script type="text/python" src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython_test/bmi.py"></script>
@@ -68,11 +68,11 @@ try{(function(){(async $=>{
     })();
   });
 
-  modal( bookmarklet, width);
+  modal( bs_winscp_bookmarklet, width);
 
 
   async function modal( elements, width){
-    let elem = $('<div>', {id:'modal_wrap_bs_winscp'}).css({
+    let elem = $('<div>', {id:'bs_winscp_modal_wrap'}).css({
       'z-index': '100', 'position': 'fixed', 'top': '0px', 'left': '0px', 'width': '100%', 'height': '100%', 'background-color': 'hsla(0, 0%, 60%, 0.7)'
     }).append(
       $('<div>', {id:'modal_outer'}).css({
@@ -87,14 +87,14 @@ try{(function(){(async $=>{
       ).hide();
     $('body').append(
       elem.click(function(e){
-        if( e.target.id === 'modal_wrap_bs_winscp' ){
-          $('#modal_wrap_bs_winscp').fadeOut('fast');
+        if( e.target.id === 'bs_winscp_modal_wrap' ){
+          $('#bs_winscp_modal_wrap').fadeOut('fast');
           $('#modal_body').empty();
         }
       })
     );
     $('#modal_body').append( elements );
-    $('#modal_wrap_bs_winscp').fadeIn('fast');
+    $('#bs_winscp_modal_wrap').fadeIn('fast');
     $('#modal_outer').width( width + 57 );
   };
 
