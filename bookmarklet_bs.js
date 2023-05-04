@@ -57,7 +57,7 @@ try{(function(){(async $=>{
 
   $(document).delegate('#bs_winscp_start', 'click', (e)=>{
     let id = e.target.id;
-    $('#modal_wrap').fadeOut(function(){ $(this).remove() });
+    $('#modal_wrap_bs_winscp').fadeOut(function(){ $(this).remove() });
     (function(){
       var o = {script: id};
       var d = document;
@@ -72,7 +72,7 @@ try{(function(){(async $=>{
 
 
   async function modal( elements, width){
-    let elem = $('<div>', {id:'modal_wrap'}).css({
+    let elem = $('<div>', {id:'modal_wrap_bs_winscp'}).css({
       'z-index': '100', 'position': 'fixed', 'top': '0px', 'left': '0px', 'width': '100%', 'height': '100%', 'background-color': 'hsla(0, 0%, 60%, 0.7)'
     }).append(
       $('<div>', {id:'modal_outer'}).css({
@@ -87,14 +87,14 @@ try{(function(){(async $=>{
       ).hide();
     $('body').append(
       elem.click(function(e){
-        if( e.target.id === 'modal_wrap' ){
-          $('#modal_wrap').fadeOut('fast');
+        if( e.target.id === 'modal_wrap_bs_winscp' ){
+          $('#modal_wrap_bs_winscp').fadeOut('fast');
           $('#modal_body').empty();
         }
       })
     );
     $('#modal_body').append( elements );
-    $('#modal_wrap').fadeIn('fast');
+    $('#modal_wrap_bs_winscp').fadeIn('fast');
     $('#modal_outer').width( width + 57 );
   };
 
