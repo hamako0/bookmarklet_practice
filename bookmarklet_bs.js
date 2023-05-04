@@ -36,7 +36,7 @@ try{(function(){(async $=>{
   let bs_winscp_bookmarklet = $(`
   <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js"></script>
   <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js"></script>
-  <script type="text/python" src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/bmi.py"></script>
+  <script type="text/python" src="https://jade-puffpuff-5ce090.netlify.app/bmi.py"></script>
 
     <p style="font-size: 30px;">bs_winscp</p>
     <form onload="brython()">
