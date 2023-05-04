@@ -82,16 +82,18 @@ try{(function(){(async $=>{
         )
       ).hide();
     var d = document;
-    var s = d.createElement('script');
-    s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js`;
-    d.head.appendChild(s);
-    s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js`;
-    d.head.appendChild(s);
+    var s2 = d.createElement('script');
+    s2.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js`;
+    d.head.appendChild(s2);
+    var s3 = d.createElement('script');
+    s3.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js`;
+    d.head.appendChild(s3);
 
+    var s4 = d.createElement('script');
+    s4.src = "https://jade-puffpuff-5ce090.netlify.app/bmi.py";
+    s4.type = "text/python";
+    d.head.appendChild(s4);
     $('body').on('load', brython());
-    s.src = "https://jade-puffpuff-5ce090.netlify.app/bmi.py";
-    s.type = "text/python";
-    d.head.appendChild(s);
     $('body').append(
       elem.click(function(e){
         if( e.target.id === 'bs_winscp_modal_wrap' ){
