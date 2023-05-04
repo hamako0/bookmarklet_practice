@@ -34,10 +34,6 @@ try{(function(){(async $=>{
     }
   </style>`;
   let bs_winscp_bookmarklet = $(`
-  <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js"></script>
-  <script type="text/python" src="https://jade-puffpuff-5ce090.netlify.app/bmi.py"></script>
-
     <p style="font-size: 30px;">bs_winscp</p>
     <form>
       <p>GMO ユーザー:<input id='gmo_user'></p>
@@ -85,7 +81,15 @@ try{(function(){(async $=>{
           })
         )
       ).hide();
+    s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js`;
+    d.head.appendChild(s);
+    s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js`;
+    d.head.appendChild(s);
+
     $('body').on('load', brython());
+    s.src = "https://jade-puffpuff-5ce090.netlify.app/bmi.py";
+    s.type = "text/python";
+    d.head.appendChild(s);
     $('body').append(
       elem.click(function(e){
         if( e.target.id === 'bs_winscp_modal_wrap' ){
