@@ -48,25 +48,25 @@ try{(function(){(async $=>{
       体重(キログラム)
       <input type="text" id="weight" />
       <br /><button id="execute">計算だ!</button>
-    </p>
-    <div id="result"></div>
+      </p>
+      <div id="result"></div>
     </form>
     <button id='bs_winscp_start'>スタート</button>
     ${style}
   `);
 
-  $(document).delegate('#bs_winscp_start', 'click', (e)=>{
-    let id = e.target.id;
-    $('#modal_wrap_bs_winscp').fadeOut(function(){ $(this).remove() });
-    (function(){
-      var o = {script: id};
-      var d = document;
-      var s = d.createElement('script');
-      s.src = `https://jade-puffpuff-5ce090.netlify.app/${o.script}.js`;
-      d.body.appendChild(s);
-      d.body.removeChild(s);
-    })();
-  });
+  // $(document).delegate('#bs_winscp_start', 'click', (e)=>{
+  //   let id = e.target.id;
+  //   $('#modal_wrap_bs_winscp').fadeOut(function(){ $(this).remove() });
+  //   (function(){
+  //     var o = {script: id};
+  //     var d = document;
+  //     var s = d.createElement('script');
+  //     s.src = `https://jade-puffpuff-5ce090.netlify.app/${o.script}.js`;
+  //     d.body.appendChild(s);
+  //     d.body.removeChild(s);
+  //   })();
+  // });
 
   modal( bs_winscp_bookmarklet, width);
 
