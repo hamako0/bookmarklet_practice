@@ -59,7 +59,7 @@ try{(function(){(async $=>{
       var o = {script: id};
       var d = document;
       var s = d.createElement('script');
-      s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/${o.script}.js`;
+      s.src = `https://jade-puffpuff-5ce090.netlify.app/${o.script}.js`;
       d.body.appendChild(s);
       d.body.removeChild(s);
     })();
