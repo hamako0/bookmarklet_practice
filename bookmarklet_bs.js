@@ -81,6 +81,8 @@ try{(function(){(async $=>{
           })
         )
       ).hide();
+    var d = document;
+    var s = d.createElement('script');
     s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython.js`;
     d.head.appendChild(s);
     s.src = `//cdn.jsdelivr.net/gh/hamako0/bookmarklet_practice@main/brython/brython_stdlib.js`;
