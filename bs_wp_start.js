@@ -2,17 +2,17 @@
 window.open("https://hamako0.github.io/login_test/");
 
 user = document.querySelector("#user");
-user.value = gmo_user;
+user.value = gmo_user.value;
 
 password = document.querySelector("#password");
-password.value = gmo_password;
+password.value = gmo_password.value;
 
 btn = document.querySelector("#btn");
 btn.click();
 
 function customer_login() {
   gmologin_domain = document.querySelector("#gmologin_domain");
-  gmologin_domain.value = gmo_domain;
+  gmologin_domain.value = gmo_domain.value;
 
   gmologin_btn = document.querySelector("#gmologin_btn");
   gmologin_btn.click();
