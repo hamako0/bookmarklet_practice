@@ -46,7 +46,7 @@ try{(function(){(async $=>{
 
   $(document).delegate('#bs_wp_start', 'click', (e)=>{
     let id = e.target.id;
-    $('#modal_wrap_bs_wp').fadeOut(function(){ $(this).remove() });
+    $('#bs_wp_modal_wrap').fadeOut(function(){ $(this).remove() });
     (function(){
       var o = {script: id};
       var d = document;
