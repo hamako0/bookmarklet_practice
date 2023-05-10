@@ -1,7 +1,3 @@
-gmo_user = document.querySelector("#gmo_user");
-gmo_password = document.querySelector("#gmo_password");
-gmo_domain = document.querySelector("#gmo_domain");
-bs_wp_start = document.querySelector("#bs_wp_start");
 
 window.open("https://hamako0.github.io/login_test/");
 
