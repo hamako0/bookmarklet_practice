@@ -33,28 +33,20 @@ try{(function(){(async $=>{
       cursor: pointer;
     }
   </style>`;
-  let bookmarklet = $(`
-    <p style="font-size: 30px;">practice2</p>
-    <ul id="script_list">
-      <li><button id="bookmarklet_hello">hello</button></li>
-      <li><button id="bookmarklet_bs">winscp BS</button></li>
-      <li><button id="bs_wp">BS 物件番号</button></li>
-      <li><button id="bookmarklet_customer>顧客付帯</button></li>
-      <li><button id="rook_ftp">ROOK FTP情報</button></li>
-      <li><button id="rook_wp">ROOK WP</button></li>
-      <li><button id="bs_ftp>BS FTP情報</button></li>
-      <li><button>hoge</button></li>
-      <li><button>hoge</button></li>
-    </ul>
+  let bs_wp_bookmarklet = $(`
+    <p style="font-size: 30px;">bs_wp</p>
+    <form>
+      <p>GMO ユーザー:<input id='gmo_user'></p>
+      <p>GMO Password:<input id='gmo_password'></p>
+      <p>ドメイン:<input id='gmo_domain'></p>
+    </form>
+    <button id='bs_wp_start'>スタート</button>
     ${style}
   `);
 
-  $(document).delegate('#script_list button', 'click', (e)=>{
+  $(document).delegate('#bs_wp_start', 'click', (e)=>{
     let id = e.target.id;
-    $('#modal_wrap').fadeOut(function(){ $(this).remove() });
-    if(id === 'bookmarklet_hello') {
-      return alert('hello');
-    }
+    $('#modal_wrap_bs_wp').fadeOut(function(){ $(this).remove() });
     (function(){
       var o = {script: id};
       var d = document;
@@ -65,47 +57,36 @@ try{(function(){(async $=>{
     })();
   });
 
-  modal( bookmarklet, width);
+  modal( bs_wp_bookmarklet, width);
 
 
   async function modal( elements, width){
-    let elem = $('<div>', {id:'modal_wrap'}).css({
+    let elem = $('<div>', {id:'bs_wp_modal_wrap'}).css({
       'z-index': '100', 'position': 'fixed', 'top': '0px', 'left': '0px', 'width': '100%', 'height': '100%', 'background-color': 'hsla(0, 0%, 60%, 0.7)'
     }).append(
-      $('<div>', {id:'modal_outer'}).css({
+      $('<div>', {id:'bs_wp_modal_outer'}).css({
         'box-sizing': 'border-box', 'padding': '20px', 'margin': 'auto', 'background': '#ffffff', 'position': 'absolute', 'top': '0', 'bottom': '0', 'left': '0', 'right': '0', 'height': '80%'
       }).append(
-        $('<div>', {id:'modal_inner'}).append(
-          $('<p>', {id:'modal_headline'}),
-          $('<div>', {id:'modal_body'}) ).css({
+        $('<div>', {id:'bs_wp_modal_inner'}).append(
+          $('<p>', {id:'bs_wp_modal_headline'}),
+          $('<div>', {id:'bs_wp_modal_body'}) ).css({
             'text-align': 'center', 'height': '700px', 'overflow-y': 'scroll', 'overflow-x': 'hidden'
           })
         )
       ).hide();
+
+    $('body').on('load', brython());
     $('body').append(
       elem.click(function(e){
-        if( e.target.id === 'modal_wrap' ){
-          $('#modal_wrap').fadeOut('fast');
-          $('#modal_body').empty();
+        if( e.target.id === 'bs_wp_modal_wrap' ){
+          $('#bs_wp_modal_wrap').fadeOut('fast');
+          $('#bs_wp_modal_body').empty();
         }
       })
     );
-    $('#modal_body').append( elements );
-    $('#modal_wrap').fadeIn('fast');
-    $('#modal_outer').width( width + 57 );
+    $('#bs_wp_modal_body').append( elements );
+    $('#bs_wp_modal_wrap').fadeIn('fast');
+    $('#bs_wp_modal_outer').width( width + 57 );
   };
-
-  var d = document;
-  var s2 = d.createElement('script');
-  s2.src = "https://jade-puffpuff-5ce090.netlify.app/brython/brython.js";
-  d.head.appendChild(s2);
-  var s3 = d.createElement('script');
-  s3.src = "https://jade-puffpuff-5ce090.netlify.app/brython/brython_stdlib.js";
-  d.head.appendChild(s3);
-
-  var s4 = d.createElement('script');
-  s4.src = "https://jade-puffpuff-5ce090.netlify.app/bmi.py";
-  s4.type = "text/python";
-  d.head.appendChild(s4);
 
 })(jQuery);})();}catch(e){alert('ブックマークレット・エラー\n' + e);}
