@@ -27,17 +27,20 @@ setTimeout(customer_login(), 1000);
 const number = document.querySelector("#number");
 const customer_password = document.querySelector("#customer_password");
 
-if (!navigator.clipboard) {
-  alert("このブラウザは対応していません");
-  return;
-}
-
-navigator.clipboard.writeText(customer_password.textContent);
-navigator.clipboard.writeText(number.textContent).then(
-  () => {
-    alert("文章をコピーしました。");
-  },
-  () => {
-    alert("コピーに失敗しました。");
+function copyToClipboard() {
+  if (!navigator.clipboard) {
+    alert("このブラウザは対応していません");
+    return;
   }
-);
+  
+  navigator.clipboard.writeText(customer_password.textContent);
+  navigator.clipboard.writeText(number.textContent).then(
+    () => {
+      alert("文章をコピーしました。");
+    },
+    () => {
+      alert("コピーに失敗しました。");
+    }
+  );
+}
+copyToClipboard();
