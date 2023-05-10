@@ -39,10 +39,10 @@ try{(function(){(async $=>{
       <li><button id="bookmarklet_hello">hello</button></li>
       <li><button id="bookmarklet_bs">winscp BS</button></li>
       <li><button id="bs_wp">BS 物件番号</button></li>
-      <li><button id="bookmarklet_customer>顧客付帯</button></li>
+      <li><button id="bookmarklet_customer">顧客付帯</button></li>
       <li><button id="rook_ftp">ROOK FTP情報</button></li>
       <li><button id="rook_wp">ROOK WP</button></li>
-      <li><button id="bs_ftp>BS FTP情報</button></li>
+      <li><button id="bs_ftp">BS FTP情報</button></li>
       <li><button>hoge</button></li>
       <li><button>hoge</button></li>
     </ul>
