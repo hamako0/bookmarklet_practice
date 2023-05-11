@@ -1,27 +1,34 @@
+login_url1 = 'https://hamako0.github.io/login_test/';
 
-window.open("https://hamako0.github.io/login_test/");
+window.open(login_url);
 
-user = document.querySelector("#user");
+user = login_url1.document.querySelector("#user");
 user.value = gmo_user.value;
 
-password = document.querySelector("#password");
+
+
+
+password = login_url1.document.querySelector("#password");
 password.value = gmo_password.value;
 
-btn = document.querySelector("#btn");
+btn = login_url1.document.querySelector("#btn");
 btn.click();
 
+login_url2 = 'https://hamako0.github.io/login_test/userpassword.html'
 function customer_login() {
-  gmologin_domain = document.querySelector("#gmologin_domain");
+  gmologin_domain = login_url2.document.querySelector("#gmologin_domain");
   gmologin_domain.value = gmo_domain.value;
 
-  gmologin_btn = document.querySelector("#gmologin_btn");
+  gmologin_btn = login_url2.document.querySelector("#gmologin_btn");
   gmologin_btn.click();
 }
 
 setTimeout(customer_login(), 1000);
 
-const number = document.querySelector("#number");
-const customer_password = document.querySelector("#customer_password");
+login_url3 = 'https://hamako0.github.io/login_test/gmopassword.html';
+
+const number = login_url3.document.querySelector("#number");
+const customer_password = login_url3.document.querySelector("#customer_password");
 
 function copyToClipboard() {
   if (!navigator.clipboard) {
