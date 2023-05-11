@@ -1,6 +1,6 @@
 login_url1 = 'https://hamako0.github.io/login_test/';
 
-window.open(login_url);
+window.open(login_url1);
 
 user = login_url1.document.querySelector("#user");
 user.value = gmo_user.value;
